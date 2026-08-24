@@ -1,19 +1,18 @@
-name: Run Pipeline
+name: YouTube Outlier Finder
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # اجرای هر ۶ ساعت یک‌بار
-  workflow_dispatch: # امکان اجرای دستی
-
-permissions:
-  contents: write # مجوز دسترسی نوشتن برای ربات گیت‌هاب
+    # هر ۶ ساعت یک‌بار به‌طور خودکار اجرا می‌شود
+    - cron: '0 */6 * * *'
+  # امکان اجرای دستی از تب Actions
+  workflow_dispatch:
 
 jobs:
-  run-pipeline:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -21,24 +20,16 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Python script
+      - name: Run Script
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python main.py
-
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
-          git add channels.json
-          git commit -m "Auto-updated channel cache database" || exit 0
-          git pull --rebase origin main
-          git push
