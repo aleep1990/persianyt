@@ -2,8 +2,11 @@ name: Run Pipeline
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # اجرای هر ۶ ساعت یک‌بار (قابل تغییر)
-  workflow_dispatch: # امکان اجرای دستی از تب Actions
+    - cron: '0 */6 * * *' # اجرای هر ۶ ساعت یک‌بار
+  workflow_dispatch: # امکان اجرای دستی
+
+permissions:
+  contents: write # مجوز دسترسی نوشتن برای ربات گیت‌هاب
 
 jobs:
   run-pipeline:
