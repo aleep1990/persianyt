@@ -3,7 +3,7 @@ name: YouTube Outlier Finder
 on:
   schedule:
     # هر ۶ ساعت یک‌بار به‌طور خودکار اجرا می‌شود
-    - cron: '0 */6 * * *'
+    - cron: '0 */12 * * *'
   # امکان اجرای دستی از تب Actions
   workflow_dispatch:
 
