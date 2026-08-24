@@ -1,0 +1,41 @@
+name: Auto YouTube Outlier Scanner & Analyzer
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *' # اجرای هر روز
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # مجوز ذخیره فایل کش در ریپازیتوری
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Scanner Script
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: python main.py
+
+    - name: Commit & Push Updated Channel Database
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Bot"
+        git add channels.json
+        git commit -m "Auto-updated channel cache database" || exit 0
+        git push
