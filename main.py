@@ -1,20 +1,89 @@
 import os
 import json
 import requests
-import googleapiclient.discovery
-import numpy as np
-from google import genai
+import google.generativeai as genai
 
-# دریافت کلیدها
-YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-
-youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
-ai_client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
+# Configuration & Environment Variables
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 CACHE_FILE = "channels.json"
+MAX_RESULTS = 10
+OUTLIER_THRESHOLD = 3.0  # Videos performing 3x better than channel average
+
+# کلمات کلیدی جامع برای کشف خودکار کانال‌های فارسی در تمامی دسته‌بندی‌ها
+SEARCH_KEYWORDS = [
+    # گیمینگ و فورتنایت
+    "فورتنایت فارسی", "Fortnite فارسی", "گیم پلی فورتنایت", "گیم پلی فارسی", "واکثرو فارسی",
+    # تکنولوژی و موبایل
+    "بررسی موبایل", "تکنولوژی فارسی", "انباکس فارسی", "ترفند گوشی",
+    # ولاگ و سبک زندگی
+    "ولاگ جدید", "دیلی ولاگ", "زندگی در", "ولاگ فارسی",
+    # سرگرمی و چالش
+    "چالش جدید", "دوربین مخفی فارسی", "سعی کن نخندی", "فان فارسی",
+    # آموزشی و علم
+    "آموزش پایتون", "هوش مصنوعی", "دانستنی ها", "کسب درآمد دلاری",
+    # موزیک و هنر
+    "موزیک ویدیو جدید", "اهنگ جدید فارسی", "رپ فارسی", "کاور موزیک",
+    # اخبار، سیاست و تحلیلی
+    "تحلیل سیاسی", "اخبار ایران", "مستند فارسی", "تحلیل روز"
+]
+
+def analyze_with_gemini(prompt):
+    if not GEMINI_API_KEY:
+        return None
+    try:
+        genai.configure(api_key=GEMINI_API_KEY)
+        model = genai.GenerativeModel("gemini-1.5-flash")
+        response = model.generate_content(prompt)
+        return response.text.strip()
+    except Exception as e:
+        print(f"[Gemini Error]: {e}")
+        return None
+
+def analyze_with_openrouter(prompt, model_name):
+    if not OPENROUTER_API_KEY:
+        return None
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": model_name,
+        "messages": [{"role": "user", "content": prompt}]
+    }
+    try:
+        response = requests.post(url, headers=headers, json=payload, timeout=15)
+        if response.status_code == 200:
+            return response.json()["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        print(f"[OpenRouter {model_name} Error]: {e}")
+    return None
+
+def analyze_video(title, description):
+    prompt = f"""
+    به عنوان یک متخصص و آنالیزور یوتیوب، علت موفقیت و ویرال شدن این ویدیو را در ۲ تا ۳ جمله کوتاه و دقیق به فارسی تحلیل کن:
+    عنوان ویدیو: {title}
+    توضیحات: {description}
+    """
+
+    analysis = analyze_with_gemini(prompt)
+    if analysis:
+        return analysis
+
+    analysis = analyze_with_openrouter(prompt, "deepseek/deepseek-chat:free")
+    if analysis:
+        return analysis
+
+    analysis = analyze_with_openrouter(prompt, "qwen/qwen-2.5-72b-instruct:free")
+    if analysis:
+        return analysis
+
+    return "تحلیل هوش مصنوعی در حال حاضر در دسترس نیست."
 
 def send_telegram_message(message):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
@@ -26,123 +95,119 @@ def send_telegram_message(message):
         "parse_mode": "HTML",
         "disable_web_page_preview": False
     }
-    requests.post(url, data=payload)
+    try:
+        requests.post(url, json=payload, timeout=10)
+    except Exception as e:
+        print(f"[Telegram Exception]: {e}")
 
-def load_known_channels():
-    if os.path.exists(CACHE_FILE):
-        with open(CACHE_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
+def load_cache():
+    try:
+        if os.path.exists(CACHE_FILE):
+            with open(CACHE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"[Cache Load Error]: {e}")
+    return {}
 
-def save_known_channels(channels):
-    with open(CACHE_FILE, "w", encoding="utf-8") as f:
-        json.dump(list(set(channels)), f, ensure_ascii=False, indent=2)
+def save_cache(cache):
+    try:
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[Cache Save Error]: {e}")
 
-def discover_new_channels(keywords, current_channels, limit_per_kw=3):
-    """کشف تدریجی کانال‌های جدید فارسی"""
-    new_found = []
-    for kw in keywords:
+def discover_auto_channels():
+    """کشف خودکار کانال‌های فعال فارسی در موضوعات گوناگون"""
+    discovered_channels = {}
+    for kw in SEARCH_KEYWORDS:
         try:
-            res = youtube.search().list(
-                q=kw,
-                type="channel",
-                relevanceLanguage="fa",
-                part="id",
-                maxResults=limit_per_kw
-            ).execute()
+            url = f"https://www.googleapis.com/youtube/v3/search?key={YOUTUBE_API_KEY}&q={kw}&type=video&part=snippet&maxResults=5&order=date"
+            res = requests.get(url, timeout=10).json()
             for item in res.get("items", []):
-                ch_id = item["id"]["channelId"]
-                if ch_id not in current_channels and ch_id not in new_found:
-                    new_found.append(ch_id)
+                snippet = item.get("snippet", {})
+                ch_id = snippet.get("channelId")
+                ch_title = snippet.get("channelTitle")
+                if ch_id and ch_title:
+                    discovered_channels[ch_id] = ch_title
         except Exception as e:
-            print(f"Error searching {kw}: {e}")
-    return new_found
+            print(f"[Auto-Discovery Error for keyword {kw}]: {e}")
+    return discovered_channels
 
-def analyze_outlier_with_gemini(video_title, channel_title, views, avg_views):
-    """تحلیل هوشمند علت موفقیت ویدیو توسط Gemini"""
-    if not ai_client:
-        return "تحلیل هوش مصنوعی فعال نیست (کلید Gemini تنظیم نشده)."
-    
-    prompt = f"""
-    تو یک متخصص تحلیل یوتیوب هستی. 
-    ویدیویی با عنوان "{video_title}" از کانال "{channel_title}" به بازدید {views:,} رسیده که {round(views/avg_views, 1)} برابر میانگین بازدیدهای عادی این کانال ({int(avg_views):,}) است.
-    
-    بر اساس الگوی ویدیوهای ویروسی (مفهوم Outlier)، در ۳ الی ۴ جمله خلاصه و کاربردی تحلیل کن که:
-    ۱. چرا تیتر و موضوع این ویدیو عملکرد فوق‌العاده‌ای داشته؟ (قلاب، کنجکاوی، هویت مخاطب یا فرمت شناخته‌شده)
-    ۲. یوتیوبرهای فارسی چه نکته‌ای می‌توانند از ساختار این ویدیو یاد بگیرند؟
-    """
+def get_channel_videos(channel_id):
     try:
-        response = ai_client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-        )
-        return response.text
-    except Exception as e:
-        return f"خطا در تحلیل هوش مصنوعی: {e}"
-
-def process_channel(channel_id, multiplier=2.5, max_results=20):
-    try:
-        ch_res = youtube.channels().list(part="snippet,contentDetails", id=channel_id).execute()
-        if not ch_res.get("items"):
-            return
-            
-        channel_title = ch_res['items'][0]['snippet']['title']
-        uploads_playlist_id = ch_res['items'][0]['contentDetails']['relatedPlaylists']['uploads']
+        url = f"https://www.googleapis.com/youtube/v3/search?key={YOUTUBE_API_KEY}&channelId={channel_id}&part=snippet,id&order=date&maxResults={MAX_RESULTS}&type=video"
+        response = requests.get(url, timeout=10).json()
         
-        pl_res = youtube.playlistItems().list(
-            part="snippet", playlistId=uploads_playlist_id, maxResults=max_results
-        ).execute()
-        
-        video_ids = [item['snippet']['resourceId']['videoId'] for item in pl_res.get('items', [])]
+        video_ids = [item["id"]["videoId"] for item in response.get("items", []) if "id" in item and "videoId" in item["id"]]
         if not video_ids:
-            return
+            return []
 
-        v_res = youtube.videos().list(part="statistics,snippet", id=",".join(video_ids)).execute()
+        stats_url = f"https://www.googleapis.com/youtube/v3/videos?key={YOUTUBE_API_KEY}&id={','.join(video_ids)}&part=snippet,statistics"
+        stats_response = requests.get(stats_url, timeout=10).json()
         
-        video_data = []
-        views_list = []
-        for item in v_res.get('items', []):
-            title = item['snippet']['title']
-            views = int(item['statistics'].get('viewCount', 0))
-            url = f"https://www.youtube.com/watch?v={item['id']}"
-            video_data.append({'title': title, 'views': views, 'url': url})
-            views_list.append(views)
-            
-        if not views_list:
-            return
-
-        avg_views = np.mean(views_list)
-        
-        for v in video_data:
-            if v['views'] >= avg_views * multiplier:
-                ratio = round(v['views'] / avg_views, 1)
-                analysis = analyze_outlier_with_gemini(v['title'], channel_title, v['views'], avg_views)
-                
-                msg = f"<b>🔥 ویدیوی استثنایی (Outlier) جدید!</b>\n\n"
-                msg += f"📺 <b>کانال:</b> {channel_title}\n"
-                msg += f"📌 <b>عنوان:</b> {v['title']}\n"
-                msg += f"📊 <b>عملکرد:</b> {ratio}x برابر میانگین ({v['views']:,} بازدید)\n"
-                msg += f"🔗 <a href='{v['url']}'>مشاهده ویدیو</a>\n\n"
-                msg += f"🧠 <b>تحلیل هوش مصنوعی (علت موفقیت):</b>\n{analysis}"
-                
-                send_telegram_message(msg)
-
+        videos = []
+        for item in stats_response.get("items", []):
+            videos.append({
+                "id": item["id"],
+                "title": item["snippet"]["title"],
+                "description": item["snippet"]["description"],
+                "views": int(item["statistics"].get("viewCount", 0)),
+                "url": f"https://www.youtube.com/watch?v={item['id']}"
+            })
+        return videos
     except Exception as e:
-        print(f"Error processing {channel_id}: {e}")
+        print(f"[YouTube API Error for Channel {channel_id}]: {e}")
+        return []
+
+def process_pipeline():
+    cache = load_cache()
+    
+    # کشف خودکار کانال‌ها از تمامی حوزه‌ها
+    channels_to_process = discover_auto_channels()
+    print(f"Discovered {len(channels_to_process)} unique active channels across all categories.")
+
+    for channel_id, channel_name in channels_to_process.items():
+        try:
+            videos = get_channel_videos(channel_id)
+            if not videos:
+                continue
+                
+            total_views = sum(v["views"] for v in videos)
+            avg_views = total_views / len(videos) if videos else 1
+            
+            if channel_id not in cache:
+                cache[channel_id] = []
+                
+            for video in videos:
+                try:
+                    video_id = video["id"]
+                    views = video["views"]
+                    
+                    if views >= (avg_views * OUTLIER_THRESHOLD) and video_id not in cache[channel_id]:
+                        performance_multiplier = round(views / avg_views, 1) if avg_views > 0 else 1
+                        
+                        ai_analysis = analyze_video(video["title"], video["description"])
+                        
+                        msg = (
+                            f"🔥 <b>ویدیوی استثنایی (Outlier) جدید!</b>\n\n"
+                            f"📺 <b>کانال:</b> {channel_name}\n"
+                            f"📌 <b>عنوان:</b> {video['title']}\n"
+                            f"📊 <b>عملکرد:</b> {performance_multiplier}x برابر میانگین ({views:,} بازدید)\n"
+                            f"🔗 <a href='{video['url']}'>مشاهده ویدیو</a>\n\n"
+                            f"🧠 <b>تحلیل هوش مصنوعی (علت موفقیت):</b>\n{ai_analysis}"
+                        )
+                        
+                        send_telegram_message(msg)
+                        cache[channel_id].append(video_id)
+                except Exception as video_err:
+                    print(f"[Error processing video {video.get('id')}]: {video_err}")
+                    continue
+
+        except Exception as channel_err:
+            print(f"[Error processing channel {channel_name}]: {channel_err}")
+            continue
+            
+    save_cache(cache)
 
 if __name__ == "__main__":
-    known_channels = load_known_channels()
-    
-    # کلمات کلیدی برای کشف کانال‌های جدید
-    keywords = ["آموزش فارسی", "بررسی گوشی فارسی", "گیم پلی فارسی", "پادکست فارسی", "فارسی یوتیوب"]
-    new_channels = discover_new_channels(keywords, known_channels, limit_per_kw=2)
-    
-    all_channels = list(set(known_channels + new_channels))
-    save_known_channels(all_channels)
-    
-    print(f"تعداد کل کانال‌های دیتابیس شما: {len(all_channels)}")
-    
-    # اسکن ۵ کانال در هر بار اجرای اکشنز برای عدم تجاوز از سهمیه API
-    channels_to_scan = all_channels[:5]
-    for ch in channels_to_scan:
-        process_channel(ch)
+    process_pipeline()
