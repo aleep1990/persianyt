@@ -1,0 +1,54 @@
+{
+  "processed_videos": [
+    "MngyDdX--NI",
+    "WT9unqVzBR8",
+    "n7nGI0OicTA",
+    "9de3KV-TPTI",
+    "p1f2Y8dYwHQ",
+    "rgLSWPKRAMU"
+  ],
+  "discovered_niches": {
+    "هوش مصنوعی": {
+      "count": 6,
+      "total_factor": 184.09999999999997
+    }
+  },
+  "seen_outliers": {
+    "rgLSWPKRAMU": {
+      "title": "هوش مصنوعی رو از ایرانی ها بگیرین #shrots #shrots #sad #meme",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 24.9,
+      "detected_at": "2026-09-30T21:06:18.880052"
+    },
+    "p1f2Y8dYwHQ": {
+      "title": "معین – هوای تو ساخته شده با هوش مصنوعی| Hava-ye To | Persian Classic Love Song",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 44.3,
+      "detected_at": "2026-09-30T21:06:19.304148"
+    },
+    "n7nGI0OicTA": {
+      "title": "ویدیوی هوش مصنوعی از سام صابری👇",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 13.3,
+      "detected_at": "2026-09-30T21:06:19.659016"
+    },
+    "9de3KV-TPTI": {
+      "title": "به این دنیا بی‌ارزش مکن باور که نمی‌ارزد | آهنگ غمگین و احساسی افغانی | Afghan Sad Song 2026",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 88.1,
+      "detected_at": "2026-09-30T21:06:20.105665"
+    },
+    "MngyDdX--NI": {
+      "title": "ساخت روبلاکس با هوش مصنوعی 3 کشور مختلف💀🔥(آمریکا بهتر بود)",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 5.8,
+      "detected_at": "2026-09-30T21:06:20.453672"
+    },
+    "WT9unqVzBR8": {
+      "title": "موشکی که از هوش مصنوعی برای پیدا کردن هدف استفاده میکنه",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 7.7,
+      "detected_at": "2026-09-30T21:06:20.916391"
+    }
+  }
+}
