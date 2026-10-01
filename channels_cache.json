@@ -1,18 +1,33 @@
 {
   "processed_videos": [
-    "MngyDdX--NI",
-    "WT9unqVzBR8",
-    "n7nGI0OicTA",
-    "9de3KV-TPTI",
-    "FmE8E-sBvAs",
-    "H7a8Xx_3Ubo",
     "rgLSWPKRAMU",
-    "p1f2Y8dYwHQ"
+    "i4Vsj2cYr1s",
+    "tcBTlqXCQFQ",
+    "Nv8RjYi97Xs",
+    "qdye0lYKZG8",
+    "9de3KV-TPTI",
+    "HbpQqowPtlw",
+    "p1f2Y8dYwHQ",
+    "H7a8Xx_3Ubo",
+    "riW5yPBReAs",
+    "MngyDdX--NI",
+    "FmE8E-sBvAs",
+    "iM6QPGuXH9U",
+    "n7nGI0OicTA",
+    "JWLT-Z9tFwY",
+    "WT9unqVzBR8",
+    "UT2y_zPnyJk",
+    "usW6l7wq0T4",
+    "1hOEMzAd_TY"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 8,
-      "total_factor": 310.7
+      "count": 16,
+      "total_factor": 663.1
+    },
+    "چت جی پی تی": {
+      "count": 3,
+      "total_factor": 149.0
     }
   },
   "seen_outliers": {
@@ -63,6 +78,72 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 9.2,
       "detected_at": "2026-10-01T05:22:41.226061"
+    },
+    "i4Vsj2cYr1s": {
+      "title": "کلیپ عروسی با هوش مصنوعی",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 13.3,
+      "detected_at": "2026-10-01T18:19:37.277023"
+    },
+    "tcBTlqXCQFQ": {
+      "title": "از من چرا رنجیده‌ای 💔 | با صدای جاودانه معین  | Moein(AI) | NAGHMEYE.BEHESHT",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 93.5,
+      "detected_at": "2026-10-01T18:19:37.689934"
+    },
+    "1hOEMzAd_TY": {
+      "title": "Moein – Az Man Chara Ranjideh (AI Song) | معین - از من چرا رنجیده (هوش مصنوعی)",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 131.2,
+      "detected_at": "2026-10-01T18:19:38.039104"
+    },
+    "Nv8RjYi97Xs": {
+      "title": "#spongebob #memes چت جی پی تی💀💀💀💀💀💀💀💀💀",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 66.9,
+      "detected_at": "2026-10-01T18:19:38.403487"
+    },
+    "HbpQqowPtlw": {
+      "title": "معین – بی‌معرفت ساخته شده با هوش مصنوعی | Moein – Bi Marefat | Persian Classic Love Song",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 45.9,
+      "detected_at": "2026-10-01T18:19:38.792446"
+    },
+    "UT2y_zPnyJk": {
+      "title": "بیا پایین تا قضیه رو بفهمی🥲💔",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 10.9,
+      "detected_at": "2026-10-01T18:19:39.297144"
+    },
+    "riW5yPBReAs": {
+      "title": " آهنگ بغض هرشبم با صدای دلنشین ساخته شده با هوش مصنوعی |  Baghze Har Shabam |",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 18.7,
+      "detected_at": "2026-10-01T18:19:39.779979"
+    },
+    "usW6l7wq0T4": {
+      "title": "به این دنیای بی ارزش |  چهاربیتی زیبا و پرسوز | This World Is Not Worth It | Bano Zarin",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 31.8,
+      "detected_at": "2026-10-01T18:19:40.202236"
+    },
+    "qdye0lYKZG8": {
+      "title": "ChatGPT verkauft alles, was du fotografierst 😳",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 71.2,
+      "detected_at": "2026-10-01T18:19:40.605879"
+    },
+    "JWLT-Z9tFwY": {
+      "title": "آهنگ تنهایی ساخته شده با هوش مصنوعی| آهنگ خاطره‌انگیز و احساس",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 11.1,
+      "detected_at": "2026-10-01T18:19:41.065054"
+    },
+    "iM6QPGuXH9U": {
+      "title": "میخوای برات ناز کنم؟ 😍🔥 | ریمیکس شاد پاییز ۱۴۰۵(هوش مصنوعی) | NAGHMEYE.BEHESHT",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 6.9,
+      "detected_at": "2026-10-01T18:19:41.465739"
     }
   }
 }
