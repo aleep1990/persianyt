@@ -4,13 +4,15 @@
     "WT9unqVzBR8",
     "n7nGI0OicTA",
     "9de3KV-TPTI",
-    "p1f2Y8dYwHQ",
-    "rgLSWPKRAMU"
+    "FmE8E-sBvAs",
+    "H7a8Xx_3Ubo",
+    "rgLSWPKRAMU",
+    "p1f2Y8dYwHQ"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 6,
-      "total_factor": 184.09999999999997
+      "count": 8,
+      "total_factor": 310.7
     }
   },
   "seen_outliers": {
@@ -49,6 +51,18 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 7.7,
       "detected_at": "2026-09-30T21:06:20.916391"
+    },
+    "H7a8Xx_3Ubo": {
+      "title": "به این دنیای بی ارزش مکن باور،که نمی ارزد",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 117.4,
+      "detected_at": "2026-10-01T05:22:40.831894"
+    },
+    "FmE8E-sBvAs": {
+      "title": "ساخت باب اسفنجی با هوش مصنوعی 3 کشور مختلف💀🔥 (ایران داغون شد😂)",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 9.2,
+      "detected_at": "2026-10-01T05:22:41.226061"
     }
   }
 }
