@@ -1,33 +1,37 @@
 {
   "processed_videos": [
-    "rgLSWPKRAMU",
-    "i4Vsj2cYr1s",
-    "tcBTlqXCQFQ",
-    "Nv8RjYi97Xs",
-    "qdye0lYKZG8",
-    "9de3KV-TPTI",
-    "HbpQqowPtlw",
-    "p1f2Y8dYwHQ",
-    "H7a8Xx_3Ubo",
-    "riW5yPBReAs",
     "MngyDdX--NI",
-    "FmE8E-sBvAs",
-    "iM6QPGuXH9U",
-    "n7nGI0OicTA",
-    "JWLT-Z9tFwY",
-    "WT9unqVzBR8",
+    "HbpQqowPtlw",
     "UT2y_zPnyJk",
+    "JWLT-Z9tFwY",
+    "tcBTlqXCQFQ",
+    "GwVi2TaaJzo",
+    "iM6QPGuXH9U",
+    "i4Vsj2cYr1s",
+    "WT9unqVzBR8",
     "usW6l7wq0T4",
-    "1hOEMzAd_TY"
+    "rgLSWPKRAMU",
+    "q1w43MJz5us",
+    "riW5yPBReAs",
+    "1hOEMzAd_TY",
+    "n7nGI0OicTA",
+    "qdye0lYKZG8",
+    "-XMAz1YApGQ",
+    "X59Rf2Rgj7U",
+    "Nv8RjYi97Xs",
+    "p1f2Y8dYwHQ",
+    "9de3KV-TPTI",
+    "H7a8Xx_3Ubo",
+    "FmE8E-sBvAs"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 16,
-      "total_factor": 663.1
+      "count": 17,
+      "total_factor": 677.5
     },
     "چت جی پی تی": {
-      "count": 3,
-      "total_factor": 149.0
+      "count": 6,
+      "total_factor": 172.9
     }
   },
   "seen_outliers": {
@@ -144,6 +148,30 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 6.9,
       "detected_at": "2026-10-01T18:19:41.465739"
+    },
+    "q1w43MJz5us": {
+      "title": "چیزی که چت جی پی تی نشون داد🙂",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 10.9,
+      "detected_at": "2026-10-02T05:11:02.204929"
+    },
+    "GwVi2TaaJzo": {
+      "title": "‌‌با چت جی پی تی رفتم پلیز دونیت‌‌‌‌‌‌‌‌‌‌ (کلی روباکس دونیت شدم)😱💸",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 4.8,
+      "detected_at": "2026-10-02T05:11:02.627099"
+    },
+    "X59Rf2Rgj7U": {
+      "title": "#spongebob #memes وایییی چت جی پی تی بسهههههه💀💀💀💀💀",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 8.2,
+      "detected_at": "2026-10-02T05:11:03.143001"
+    },
+    "-XMAz1YApGQ": {
+      "title": "جوانی چونکه از کف رفت دوباره برنمی‌گردد | آهنگ چهاربیتی | بانو رویا",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 14.4,
+      "detected_at": "2026-10-02T05:11:03.611286"
     }
   }
 }
