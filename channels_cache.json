@@ -1,28 +1,29 @@
 {
   "processed_videos": [
-    "MngyDdX--NI",
-    "HbpQqowPtlw",
-    "UT2y_zPnyJk",
-    "JWLT-Z9tFwY",
-    "tcBTlqXCQFQ",
-    "GwVi2TaaJzo",
-    "iM6QPGuXH9U",
-    "i4Vsj2cYr1s",
-    "WT9unqVzBR8",
-    "usW6l7wq0T4",
-    "rgLSWPKRAMU",
-    "q1w43MJz5us",
-    "riW5yPBReAs",
-    "1hOEMzAd_TY",
-    "n7nGI0OicTA",
-    "qdye0lYKZG8",
-    "-XMAz1YApGQ",
-    "X59Rf2Rgj7U",
-    "Nv8RjYi97Xs",
-    "p1f2Y8dYwHQ",
+    "hkSKZIcdb1A",
+    "FmE8E-sBvAs",
     "9de3KV-TPTI",
+    "WT9unqVzBR8",
+    "HbpQqowPtlw",
+    "rgLSWPKRAMU",
     "H7a8Xx_3Ubo",
-    "FmE8E-sBvAs"
+    "Nv8RjYi97Xs",
+    "tcBTlqXCQFQ",
+    "UT2y_zPnyJk",
+    "iM6QPGuXH9U",
+    "q1w43MJz5us",
+    "-XMAz1YApGQ",
+    "riW5yPBReAs",
+    "X59Rf2Rgj7U",
+    "1hOEMzAd_TY",
+    "p1f2Y8dYwHQ",
+    "GwVi2TaaJzo",
+    "usW6l7wq0T4",
+    "MngyDdX--NI",
+    "qdye0lYKZG8",
+    "JWLT-Z9tFwY",
+    "i4Vsj2cYr1s",
+    "n7nGI0OicTA"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
@@ -30,8 +31,8 @@
       "total_factor": 677.5
     },
     "چت جی پی تی": {
-      "count": 6,
-      "total_factor": 172.9
+      "count": 7,
+      "total_factor": 181.70000000000002
     }
   },
   "seen_outliers": {
@@ -172,6 +173,12 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 14.4,
       "detected_at": "2026-10-02T05:11:03.611286"
+    },
+    "hkSKZIcdb1A": {
+      "title": "وقتی چت‌جی‌پی‌تی با امیرحسین قیاسی زیادی صمیمی می‌شه",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 8.8,
+      "detected_at": "2026-10-02T17:45:01.520196"
     }
   }
 }
