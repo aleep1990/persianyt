@@ -1,38 +1,40 @@
 {
   "processed_videos": [
-    "riW5yPBReAs",
-    "qdye0lYKZG8",
-    "FmE8E-sBvAs",
+    "X59Rf2Rgj7U",
+    "hkSKZIcdb1A",
     "n7nGI0OicTA",
+    "FmE8E-sBvAs",
     "-XMAz1YApGQ",
-    "MngyDdX--NI",
+    "rgLSWPKRAMU",
     "q1w43MJz5us",
     "1hOEMzAd_TY",
-    "tcBTlqXCQFQ",
-    "iM6QPGuXH9U",
-    "p1f2Y8dYwHQ",
-    "X59Rf2Rgj7U",
-    "rgLSWPKRAMU",
-    "9de3KV-TPTI",
     "WT9unqVzBR8",
-    "JWLT-Z9tFwY",
-    "Nv8RjYi97Xs",
-    "UT2y_zPnyJk",
-    "HbpQqowPtlw",
-    "i4Vsj2cYr1s",
     "H7a8Xx_3Ubo",
-    "GwVi2TaaJzo",
+    "qdye0lYKZG8",
+    "UT2y_zPnyJk",
+    "riW5yPBReAs",
+    "9de3KV-TPTI",
+    "SJvVDc2fF7U",
+    "p1f2Y8dYwHQ",
+    "JWLT-Z9tFwY",
+    "tcBTlqXCQFQ",
     "usW6l7wq0T4",
-    "hkSKZIcdb1A"
+    "Nv8RjYi97Xs",
+    "HbpQqowPtlw",
+    "GwVi2TaaJzo",
+    "iM6QPGuXH9U",
+    "i4Vsj2cYr1s",
+    "wGyagGFJRLM",
+    "MngyDdX--NI"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 17,
-      "total_factor": 677.5
+      "count": 18,
+      "total_factor": 6739.4
     },
     "چت جی پی تی": {
-      "count": 7,
-      "total_factor": 181.70000000000002
+      "count": 8,
+      "total_factor": 185.10000000000002
     }
   },
   "seen_outliers": {
@@ -179,6 +181,18 @@
       "keyword": "چت جی پی تی",
       "outlier_factor": 8.8,
       "detected_at": "2026-10-02T17:45:01.520196"
+    },
+    "SJvVDc2fF7U": {
+      "title": "وقتی 3 دقیقه chatGPT رو گوگل صدا میکنی...",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 3.4,
+      "detected_at": "2026-10-03T16:04:16.515884"
+    },
+    "wGyagGFJRLM": {
+      "title": "ایلان ماسک حرف خود را اصلاح کرد و اکنون هوش مصنوعی را به جای هوش مصنوعی، SI می‌نامد.",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 6061.9,
+      "detected_at": "2026-10-03T16:04:17.032991"
     }
   }
 }
