@@ -1,40 +1,42 @@
 {
   "processed_videos": [
-    "X59Rf2Rgj7U",
-    "hkSKZIcdb1A",
+    "GwVi2TaaJzo",
+    "Nv8RjYi97Xs",
+    "MngyDdX--NI",
+    "1hOEMzAd_TY",
+    "9de3KV-TPTI",
+    "riW5yPBReAs",
+    "usW6l7wq0T4",
     "n7nGI0OicTA",
+    "UT2y_zPnyJk",
+    "hkSKZIcdb1A",
     "FmE8E-sBvAs",
-    "-XMAz1YApGQ",
+    "-bO4Zp3rEaQ",
+    "i4Vsj2cYr1s",
+    "tcBTlqXCQFQ",
+    "HbpQqowPtlw",
+    "H7a8Xx_3Ubo",
+    "agd7MMI5gy4",
     "rgLSWPKRAMU",
     "q1w43MJz5us",
-    "1hOEMzAd_TY",
-    "WT9unqVzBR8",
-    "H7a8Xx_3Ubo",
-    "qdye0lYKZG8",
-    "UT2y_zPnyJk",
-    "riW5yPBReAs",
-    "9de3KV-TPTI",
     "SJvVDc2fF7U",
-    "p1f2Y8dYwHQ",
+    "WT9unqVzBR8",
     "JWLT-Z9tFwY",
-    "tcBTlqXCQFQ",
-    "usW6l7wq0T4",
-    "Nv8RjYi97Xs",
-    "HbpQqowPtlw",
-    "GwVi2TaaJzo",
-    "iM6QPGuXH9U",
-    "i4Vsj2cYr1s",
+    "qdye0lYKZG8",
     "wGyagGFJRLM",
-    "MngyDdX--NI"
+    "iM6QPGuXH9U",
+    "-XMAz1YApGQ",
+    "X59Rf2Rgj7U",
+    "p1f2Y8dYwHQ"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 18,
-      "total_factor": 6739.4
+      "count": 19,
+      "total_factor": 7152.599999999999
     },
     "چت جی پی تی": {
-      "count": 8,
-      "total_factor": 185.10000000000002
+      "count": 9,
+      "total_factor": 199.3
     }
   },
   "seen_outliers": {
@@ -193,6 +195,18 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 6061.9,
       "detected_at": "2026-10-03T16:04:17.032991"
+    },
+    "-bO4Zp3rEaQ": {
+      "title": "چت جی پی تی داره خطرناک میشه ها☠️",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 14.2,
+      "detected_at": "2026-10-04T05:25:47.966668"
+    },
+    "agd7MMI5gy4": {
+      "title": "۳ سال تا یک دنیای دیگر؟  آینده AI با کوشیار عظیمیان | روزنامه | اپیزود ۶۸ - ۶ مهر",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 413.2,
+      "detected_at": "2026-10-04T05:25:48.324254"
     }
   }
 }
