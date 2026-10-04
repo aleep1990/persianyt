@@ -1,38 +1,40 @@
 {
   "processed_videos": [
-    "GwVi2TaaJzo",
-    "Nv8RjYi97Xs",
-    "MngyDdX--NI",
-    "1hOEMzAd_TY",
-    "9de3KV-TPTI",
-    "riW5yPBReAs",
-    "usW6l7wq0T4",
-    "n7nGI0OicTA",
-    "UT2y_zPnyJk",
-    "hkSKZIcdb1A",
-    "FmE8E-sBvAs",
-    "-bO4Zp3rEaQ",
-    "i4Vsj2cYr1s",
-    "tcBTlqXCQFQ",
-    "HbpQqowPtlw",
-    "H7a8Xx_3Ubo",
-    "agd7MMI5gy4",
-    "rgLSWPKRAMU",
-    "q1w43MJz5us",
-    "SJvVDc2fF7U",
-    "WT9unqVzBR8",
     "JWLT-Z9tFwY",
-    "qdye0lYKZG8",
-    "wGyagGFJRLM",
-    "iM6QPGuXH9U",
+    "i4Vsj2cYr1s",
+    "agd7MMI5gy4",
+    "GwVi2TaaJzo",
+    "H7a8Xx_3Ubo",
     "-XMAz1YApGQ",
     "X59Rf2Rgj7U",
-    "p1f2Y8dYwHQ"
+    "9de3KV-TPTI",
+    "1hOEMzAd_TY",
+    "bX2XVJJoJ-0",
+    "n7nGI0OicTA",
+    "-bO4Zp3rEaQ",
+    "p1f2Y8dYwHQ",
+    "rgLSWPKRAMU",
+    "SJvVDc2fF7U",
+    "FmE8E-sBvAs",
+    "WT9unqVzBR8",
+    "Nv8RjYi97Xs",
+    "HbpQqowPtlw",
+    "iM6QPGuXH9U",
+    "q1w43MJz5us",
+    "qdye0lYKZG8",
+    "tcBTlqXCQFQ",
+    "hkSKZIcdb1A",
+    "UT2y_zPnyJk",
+    "e11EQZyNhGE",
+    "usW6l7wq0T4",
+    "wGyagGFJRLM",
+    "riW5yPBReAs",
+    "MngyDdX--NI"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 19,
-      "total_factor": 7152.599999999999
+      "count": 21,
+      "total_factor": 7165.7
     },
     "چت جی پی تی": {
       "count": 9,
@@ -207,6 +209,18 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 413.2,
       "detected_at": "2026-10-04T05:25:48.324254"
+    },
+    "bX2XVJJoJ-0": {
+      "title": "آهنگ زبیده زبیده با رقص جره یی عروس داماد اجرا#هوش_مصنوعی #نگاه_نو ",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 8.3,
+      "detected_at": "2026-10-04T16:43:56.915262"
+    },
+    "e11EQZyNhGE": {
+      "title": "معین - قسمت  نبود | Moein – Ghesmat Nabood ساخته شده با هوش مصنوعی |Persian Classic Love Song",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 4.8,
+      "detected_at": "2026-10-04T16:43:57.308190"
     }
   }
 }
