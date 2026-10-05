@@ -1,40 +1,41 @@
 {
   "processed_videos": [
-    "JWLT-Z9tFwY",
     "i4Vsj2cYr1s",
-    "agd7MMI5gy4",
-    "GwVi2TaaJzo",
-    "H7a8Xx_3Ubo",
-    "-XMAz1YApGQ",
-    "X59Rf2Rgj7U",
-    "9de3KV-TPTI",
-    "1hOEMzAd_TY",
-    "bX2XVJJoJ-0",
-    "n7nGI0OicTA",
-    "-bO4Zp3rEaQ",
-    "p1f2Y8dYwHQ",
-    "rgLSWPKRAMU",
-    "SJvVDc2fF7U",
-    "FmE8E-sBvAs",
-    "WT9unqVzBR8",
     "Nv8RjYi97Xs",
-    "HbpQqowPtlw",
-    "iM6QPGuXH9U",
-    "q1w43MJz5us",
-    "qdye0lYKZG8",
     "tcBTlqXCQFQ",
-    "hkSKZIcdb1A",
-    "UT2y_zPnyJk",
-    "e11EQZyNhGE",
     "usW6l7wq0T4",
+    "X59Rf2Rgj7U",
+    "bX2XVJJoJ-0",
+    "SJvVDc2fF7U",
+    "qdye0lYKZG8",
     "wGyagGFJRLM",
+    "JWLT-Z9tFwY",
+    "agd7MMI5gy4",
+    "MngyDdX--NI",
+    "1hOEMzAd_TY",
     "riW5yPBReAs",
-    "MngyDdX--NI"
+    "BISYFFhfaEU",
+    "hkSKZIcdb1A",
+    "iM6QPGuXH9U",
+    "-XMAz1YApGQ",
+    "-bO4Zp3rEaQ",
+    "HbpQqowPtlw",
+    "9de3KV-TPTI",
+    "n7nGI0OicTA",
+    "UT2y_zPnyJk",
+    "H7a8Xx_3Ubo",
+    "q1w43MJz5us",
+    "WT9unqVzBR8",
+    "rgLSWPKRAMU",
+    "e11EQZyNhGE",
+    "GwVi2TaaJzo",
+    "FmE8E-sBvAs",
+    "p1f2Y8dYwHQ"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 21,
-      "total_factor": 7165.7
+      "count": 22,
+      "total_factor": 7316.599999999999
     },
     "چت جی پی تی": {
       "count": 9,
@@ -221,6 +222,12 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 4.8,
       "detected_at": "2026-10-04T16:43:57.308190"
+    },
+    "BISYFFhfaEU": {
+      "title": "🎧بهار زندگی 🎵هوش مصنوعی در سبک و استایل استاد #معین 🎵از Dj Arshil",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 150.9,
+      "detected_at": "2026-10-05T05:09:22.826750"
     }
   }
 }
