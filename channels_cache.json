@@ -1,41 +1,43 @@
 {
   "processed_videos": [
-    "i4Vsj2cYr1s",
-    "Nv8RjYi97Xs",
-    "tcBTlqXCQFQ",
-    "usW6l7wq0T4",
-    "X59Rf2Rgj7U",
-    "bX2XVJJoJ-0",
-    "SJvVDc2fF7U",
-    "qdye0lYKZG8",
-    "wGyagGFJRLM",
-    "JWLT-Z9tFwY",
-    "agd7MMI5gy4",
-    "MngyDdX--NI",
     "1hOEMzAd_TY",
-    "riW5yPBReAs",
-    "BISYFFhfaEU",
+    "agd7MMI5gy4",
     "hkSKZIcdb1A",
-    "iM6QPGuXH9U",
-    "-XMAz1YApGQ",
-    "-bO4Zp3rEaQ",
-    "HbpQqowPtlw",
-    "9de3KV-TPTI",
-    "n7nGI0OicTA",
-    "UT2y_zPnyJk",
-    "H7a8Xx_3Ubo",
+    "wGyagGFJRLM",
     "q1w43MJz5us",
-    "WT9unqVzBR8",
-    "rgLSWPKRAMU",
-    "e11EQZyNhGE",
-    "GwVi2TaaJzo",
+    "3_FYaDSHO28",
     "FmE8E-sBvAs",
-    "p1f2Y8dYwHQ"
+    "qdye0lYKZG8",
+    "bX2XVJJoJ-0",
+    "9de3KV-TPTI",
+    "X59Rf2Rgj7U",
+    "-bO4Zp3rEaQ",
+    "GwVi2TaaJzo",
+    "usW6l7wq0T4",
+    "WT9unqVzBR8",
+    "riW5yPBReAs",
+    "e11EQZyNhGE",
+    "-XMAz1YApGQ",
+    "BISYFFhfaEU",
+    "Nv8RjYi97Xs",
+    "UT2y_zPnyJk",
+    "SJvVDc2fF7U",
+    "i4Vsj2cYr1s",
+    "WpPkXFalBlw",
+    "iM6QPGuXH9U",
+    "tcBTlqXCQFQ",
+    "n7nGI0OicTA",
+    "HbpQqowPtlw",
+    "H7a8Xx_3Ubo",
+    "JWLT-Z9tFwY",
+    "MngyDdX--NI",
+    "p1f2Y8dYwHQ",
+    "rgLSWPKRAMU"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 22,
-      "total_factor": 7316.599999999999
+      "count": 24,
+      "total_factor": 7341.599999999999
     },
     "چت جی پی تی": {
       "count": 9,
@@ -228,6 +230,18 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 150.9,
       "detected_at": "2026-10-05T05:09:22.826750"
+    },
+    "3_FYaDSHO28": {
+      "title": "Moein - Baghz Har Shabm - (هوش مصنوعی) معین - بغض هر شبم",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 7.1,
+      "detected_at": "2026-10-06T05:55:27.340044"
+    },
+    "WpPkXFalBlw": {
+      "title": "آهنگ های هوش مصنوعی ریمکس جدید #duet #لایک #افغانستان #عاشقانه #آهنگ_افغانی",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 17.9,
+      "detected_at": "2026-10-06T05:55:27.768233"
     }
   }
 }
