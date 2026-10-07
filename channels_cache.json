@@ -1,43 +1,44 @@
 {
   "processed_videos": [
-    "SJvVDc2fF7U",
-    "qdye0lYKZG8",
-    "H7a8Xx_3Ubo",
-    "agd7MMI5gy4",
-    "n7nGI0OicTA",
-    "MngyDdX--NI",
-    "BISYFFhfaEU",
-    "1hOEMzAd_TY",
-    "3_FYaDSHO28",
-    "i4Vsj2cYr1s",
-    "e11EQZyNhGE",
+    "9de3KV-TPTI",
+    "WT9unqVzBR8",
+    "JWLT-Z9tFwY",
     "q1w43MJz5us",
-    "wGyagGFJRLM",
-    "GwVi2TaaJzo",
+    "bX2XVJJoJ-0",
+    "SJvVDc2fF7U",
+    "usW6l7wq0T4",
+    "H7a8Xx_3Ubo",
+    "-bO4Zp3rEaQ",
+    "hkSKZIcdb1A",
+    "agd7MMI5gy4",
+    "HbpQqowPtlw",
+    "BISYFFhfaEU",
+    "3_FYaDSHO28",
+    "iM6QPGuXH9U",
     "riW5yPBReAs",
     "-XMAz1YApGQ",
-    "HbpQqowPtlw",
-    "JWLT-Z9tFwY",
-    "iM6QPGuXH9U",
-    "p1f2Y8dYwHQ",
-    "9de3KV-TPTI",
-    "hkSKZIcdb1A",
-    "Nv8RjYi97Xs",
-    "UT2y_zPnyJk",
-    "WT9unqVzBR8",
-    "WpPkXFalBlw",
-    "-bO4Zp3rEaQ",
-    "X59Rf2Rgj7U",
-    "bX2XVJJoJ-0",
     "rgLSWPKRAMU",
-    "tcBTlqXCQFQ",
     "FmE8E-sBvAs",
-    "usW6l7wq0T4"
+    "Rr2rT9ooPzQ",
+    "GwVi2TaaJzo",
+    "p1f2Y8dYwHQ",
+    "e11EQZyNhGE",
+    "qdye0lYKZG8",
+    "wGyagGFJRLM",
+    "i4Vsj2cYr1s",
+    "X59Rf2Rgj7U",
+    "MngyDdX--NI",
+    "Nv8RjYi97Xs",
+    "tcBTlqXCQFQ",
+    "1hOEMzAd_TY",
+    "UT2y_zPnyJk",
+    "WpPkXFalBlw",
+    "n7nGI0OicTA"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 24,
-      "total_factor": 7341.599999999999
+      "count": 25,
+      "total_factor": 7362.2
     },
     "چت جی پی تی": {
       "count": 9,
@@ -242,6 +243,12 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 17.9,
       "detected_at": "2026-10-06T05:55:27.768233"
+    },
+    "Rr2rT9ooPzQ": {
+      "title": "حمیرا با هوش مصنوعی",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 20.6,
+      "detected_at": "2026-10-07T05:28:40.416300"
     }
   }
 }
