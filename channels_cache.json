@@ -1,45 +1,46 @@
 {
   "processed_videos": [
-    "rgLSWPKRAMU",
-    "3_FYaDSHO28",
-    "HbpQqowPtlw",
-    "FmE8E-sBvAs",
-    "GwVi2TaaJzo",
-    "iM6QPGuXH9U",
-    "X59Rf2Rgj7U",
     "hkSKZIcdb1A",
-    "Nv8RjYi97Xs",
-    "bX2XVJJoJ-0",
-    "pgWaNW8TOnI",
-    "BISYFFhfaEU",
-    "tcBTlqXCQFQ",
     "agd7MMI5gy4",
-    "p1f2Y8dYwHQ",
-    "9de3KV-TPTI",
-    "-bO4Zp3rEaQ",
-    "Rr2rT9ooPzQ",
-    "qdye0lYKZG8",
-    "JWLT-Z9tFwY",
-    "riW5yPBReAs",
-    "q1w43MJz5us",
+    "FmE8E-sBvAs",
+    "bX2XVJJoJ-0",
+    "MngyDdX--NI",
+    "BISYFFhfaEU",
+    "1hOEMzAd_TY",
+    "WpPkXFalBlw",
+    "pgWaNW8TOnI",
+    "X59Rf2Rgj7U",
+    "tcBTlqXCQFQ",
+    "-XMAz1YApGQ",
+    "HbpQqowPtlw",
     "n7nGI0OicTA",
     "wGyagGFJRLM",
-    "WpPkXFalBlw",
+    "JWLT-Z9tFwY",
+    "-bO4Zp3rEaQ",
+    "Nv8RjYi97Xs",
     "UT2y_zPnyJk",
-    "e11EQZyNhGE",
-    "i4Vsj2cYr1s",
-    "1hOEMzAd_TY",
-    "usW6l7wq0T4",
-    "-XMAz1YApGQ",
+    "GwVi2TaaJzo",
     "SJvVDc2fF7U",
+    "iM6QPGuXH9U",
+    "Rr2rT9ooPzQ",
+    "usW6l7wq0T4",
+    "p1f2Y8dYwHQ",
+    "rgLSWPKRAMU",
+    "9de3KV-TPTI",
+    "3_FYaDSHO28",
+    "Cg3_8GiXuZg",
+    "e11EQZyNhGE",
+    "q1w43MJz5us",
     "WT9unqVzBR8",
+    "i4Vsj2cYr1s",
     "H7a8Xx_3Ubo",
-    "MngyDdX--NI"
+    "qdye0lYKZG8",
+    "riW5yPBReAs"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
-      "count": 26,
-      "total_factor": 7378.5
+      "count": 27,
+      "total_factor": 7387.2
     },
     "چت جی پی تی": {
       "count": 9,
@@ -256,6 +257,12 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 16.3,
       "detected_at": "2026-10-07T18:46:09.984816"
+    },
+    "Cg3_8GiXuZg": {
+      "title": "هوش مصنوعی #انگیزشی #فکت #پیشرفت",
+      "keyword": "هوش مصنوعی",
+      "outlier_factor": 8.7,
+      "detected_at": "2026-10-08T18:44:17.381984"
     }
   }
 }
