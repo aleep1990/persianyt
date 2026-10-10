@@ -1,43 +1,46 @@
 {
   "processed_videos": [
-    "-XMAz1YApGQ",
-    "q1w43MJz5us",
-    "Nv8RjYi97Xs",
-    "X59Rf2Rgj7U",
-    "usW6l7wq0T4",
-    "-bO4Zp3rEaQ",
-    "PxfIjbXJRms",
-    "tcBTlqXCQFQ",
-    "pgWaNW8TOnI",
-    "qdye0lYKZG8",
-    "bX2XVJJoJ-0",
-    "WT9unqVzBR8",
-    "hkSKZIcdb1A",
-    "Cg3_8GiXuZg",
-    "UT2y_zPnyJk",
-    "iM6QPGuXH9U",
-    "GwVi2TaaJzo",
-    "9de3KV-TPTI",
-    "BISYFFhfaEU",
-    "agd7MMI5gy4",
-    "riW5yPBReAs",
-    "wGyagGFJRLM",
-    "p1f2Y8dYwHQ",
-    "WpPkXFalBlw",
-    "SJvVDc2fF7U",
-    "e11EQZyNhGE",
     "MngyDdX--NI",
     "i4Vsj2cYr1s",
-    "1hOEMzAd_TY",
-    "JWLT-Z9tFwY",
-    "HbpQqowPtlw",
-    "n7nGI0OicTA",
-    "rgLSWPKRAMU",
-    "Rr2rT9ooPzQ",
+    "pgWaNW8TOnI",
     "H7a8Xx_3Ubo",
     "FmE8E-sBvAs",
+    "Cg3_8GiXuZg",
     "wRA4cmVMHEA",
-    "3_FYaDSHO28"
+    "HbpQqowPtlw",
+    "3_FYaDSHO28",
+    "we1whwyEHQg",
+    "YgSJ7wI4YNA",
+    "tcBTlqXCQFQ",
+    "Nv8RjYi97Xs",
+    "WT9unqVzBR8",
+    "rgLSWPKRAMU",
+    "q1w43MJz5us",
+    "p1f2Y8dYwHQ",
+    "PxfIjbXJRms",
+    "iM6QPGuXH9U",
+    "e11EQZyNhGE",
+    "Rr2rT9ooPzQ",
+    "WpPkXFalBlw",
+    "agd7MMI5gy4",
+    "qdye0lYKZG8",
+    "BISYFFhfaEU",
+    "hkSKZIcdb1A",
+    "-XMAz1YApGQ",
+    "wGyagGFJRLM",
+    "JWLT-Z9tFwY",
+    "9de3KV-TPTI",
+    "UT2y_zPnyJk",
+    "bX2XVJJoJ-0",
+    "X59Rf2Rgj7U",
+    "1hOEMzAd_TY",
+    "usW6l7wq0T4",
+    "SJvVDc2fF7U",
+    "-bO4Zp3rEaQ",
+    "n7nGI0OicTA",
+    "GwVi2TaaJzo",
+    "riW5yPBReAs",
+    "VAR5PyXLbfE"
   ],
   "discovered_niches": {
     "هوش مصنوعی": {
@@ -45,8 +48,8 @@
       "total_factor": 7409.900000000001
     },
     "چت جی پی تی": {
-      "count": 9,
-      "total_factor": 199.3
+      "count": 12,
+      "total_factor": 216.8
     }
   },
   "seen_outliers": {
@@ -277,6 +280,24 @@
       "keyword": "هوش مصنوعی",
       "outlier_factor": 8.6,
       "detected_at": "2026-10-09T18:14:49.990879"
+    },
+    "we1whwyEHQg": {
+      "title": "Installing ChatGPT on a calculator",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 3.1,
+      "detected_at": "2026-10-10T05:25:23.676005"
+    },
+    "YgSJ7wI4YNA": {
+      "title": "از دست این چت جی پی تی🤣#bts#bangtan",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 3.4,
+      "detected_at": "2026-10-10T05:25:24.086795"
+    },
+    "VAR5PyXLbfE": {
+      "title": "چت GPT اگه انسان بود😂",
+      "keyword": "چت جی پی تی",
+      "outlier_factor": 11.0,
+      "detected_at": "2026-10-10T05:25:24.452784"
     }
   }
 }
